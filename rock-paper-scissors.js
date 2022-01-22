@@ -13,49 +13,42 @@ function computerPlay (choices) {
 function gameRound (playerSelection, computerSelection) {
     
     playerSelection = window.prompt("Rock, paper, or scissors?");
+    let result = "";
     
     switch (true) {
         case playerSelection.toLowerCase() == "rock" && computerSelection == "rock":
-            console.log("Computer chose rock.");
-            console.log("Tie! Both players chose rock.");
+            result = "Computer chose rock. \n Tie! Both players chose rock.";
             break;
         case playerSelection.toLowerCase() == "paper" && computerSelection == "paper":
-            console.log("Computer chose paper.");
-            console.log("Tie! Both players chose paper.");
+            result = "Computer chose paper. \n Tie! Both players chose paper.";
             break;
         case playerSelection.toLowerCase() == "scissors" && computerSelection == "scissors":
-            console.log("Computer chose scissors.");
-            console.log("Tie! Both players chose scissors.");
+            result = "Computer chose scissors. \n Tie! Both players chose scissors.";
             break;
         case playerSelection.toLowerCase() == "rock" && computerSelection == "paper":
-            console.log("Computer chose paper.");
-            console.log("You lost! Paper beats rock.");
+            result = "Computer chose paper. \n You lost! Paper beats rock.";
             break;
         case playerSelection.toLowerCase() == "rock" && computerSelection == "scissors":
-            console.log("Computer chose scissors.");
-            console.log("You win! Rock beats scissors.");
+            result = "Computer chose scissors. \n You win! Rock beats scissors.";
             break;
         case playerSelection.toLowerCase() == "paper" && computerSelection == "rock":
-            console.log("Computer chose rock.");
-            console.log("You win! Paper beats rock.");
+            result = "Computer chose rock. \n You win! Paper beats rock.";
             break;
         case playerSelection.toLowerCase() == "paper" && computerSelection == "scissors":
-            console.log("Computer chose scissors.");
-            console.log("You lost! Scissors beats paper.");
+            result = "Computer chose scissors. \n You lost! Scissors beats paper.";
             break;
         case playerSelection.toLowerCase() == "scissors" && computerSelection == "paper":
-            console.log("Computer chose paper.");
-            console.log("You win! Scissors beats paper.");
+            result = "Computer chose paper. \n You win! Scissors beats paper.";
             break;
         case playerSelection.toLowerCase() == "scissors" && computerSelection == "rock":
-            console.log("Computer chose rock.");    
-            console.log("You lost! Rock beats scissors.");
+            result = "Computer chose rock. \n You lost! Rock beats scissors.";    
             break;   
         default:
-            console.log("Rock, paper, or scissors?");         
+            result = "Rock, paper, or scissors?"; 
+            
     }
 
-
+    return result;
 }
 
 let playerSelection = "";
