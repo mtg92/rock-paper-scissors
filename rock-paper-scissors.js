@@ -74,7 +74,6 @@ function game() {
     if (playerScore == 3) {
         console.log("You are the winner, congratulations!");
     } else if (computerScore == 3) {
-        console.log("You lost. Better luck next time!")
+        console.log("You lost the game. Better luck next time!")
     }
 }
-
