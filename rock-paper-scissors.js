@@ -1,6 +1,6 @@
 
-// initialises an array with the choices for the game: rock, paper, scissors, and player selection as an empty string
-let choices = ["rock", "paper", "scissors"];
+// initialises an array with the choices for the game: frodo, gollum, ring, and player selection as an empty string
+let choices = ["frodo", "gollum", "ring"];
 let playerSelection = "";
 
 // function which determines the computer's choice by taking the array 'choices' as a parameter,
@@ -10,43 +10,43 @@ function computerPlay (choices) {
     return choices[index];
 }
 
-// function which plays a round of rock, paper, scissors. it prompts the user to select their move,
+// function which plays a round of frodo, gollum, ring. it prompts the user to select their move,
 // initialises the return and then uses a switch  method to store the result in the result variable, returning the return at the end.
 function playRound (playerSelection, computerSelection) {
     
-    playerSelection = window.prompt("Rock, paper, or scissors?");
+    playerSelection = window.prompt("Frodo, Gollum or Ring?");
     let result = "";
     
     switch (true) {
-        case playerSelection.toLowerCase() == "rock" && computerSelection == "rock":
-            result = "You chose rock. \nComputer chose rock. \n Tie! Both players chose rock.";
+        case playerSelection.toLowerCase() == "frodo" && computerSelection == "frodo":
+            result = "You chose Frodo. \nSauron chose Frodo. \n Tie! You both chose Frodo.";
             break;
-        case playerSelection.toLowerCase() == "paper" && computerSelection == "paper":
-            result = "You chose paper. \nComputer chose paper. \n Tie! Both players chose paper.";
+        case playerSelection.toLowerCase() == "gollum" && computerSelection == "gollum":
+            result = "You chose Gollum. \nSauron chose Gollum. \n Tie! You both chose Gollum.";
             break;
-        case playerSelection.toLowerCase() == "scissors" && computerSelection == "scissors":
-            result = "You chose scissors. \nComputer chose scissors. \n Tie! Both players chose scissors.";
+        case playerSelection.toLowerCase() == "ring" && computerSelection == "ring":
+            result = "You chose the Ring. \nSauron chose the Ring. \n Tie! You both chose the Ring.";
             break;
-        case playerSelection.toLowerCase() == "rock" && computerSelection == "paper":
-            result = "You chose rock. \nComputer chose paper. \n You lost! Paper beats rock.";
+        case playerSelection.toLowerCase() == "frodo" && computerSelection == "gollum":
+            result = "You chose Frodo. \nSauron chose Gollum. \n You lost! Gollum maims Frodo.";
             break;
-        case playerSelection.toLowerCase() == "rock" && computerSelection == "scissors":
-            result = "You chose rock. \nComputer chose scissors. \n You win! Rock beats scissors.";
+        case playerSelection.toLowerCase() == "frodo" && computerSelection == "ring":
+            result = "You chose Frodo. \nSauron chose the Ring. \n You win! Frodo destroys the Ring.";
             break;
-        case playerSelection.toLowerCase() == "paper" && computerSelection == "rock":
-            result = "You chose paper. \nComputer chose rock. \n You win! Paper beats rock.";
+        case playerSelection.toLowerCase() == "gollum" && computerSelection == "frodo":
+            result = "You chose Gollum. \nSauron chose Frodo. \n You win! Gollum maims Frodo.";
             break;
-        case playerSelection.toLowerCase() == "paper" && computerSelection == "scissors":
-            result = "You chose paper. \nComputer chose scissors. \n You lost! Scissors beats paper.";
+        case playerSelection.toLowerCase() == "gollum" && computerSelection == "ring":
+            result = "You chose Gollum. \nSauron chose the Ring. \n You lost! The Ring corrupts Gollum.";
             break;
-        case playerSelection.toLowerCase() == "scissors" && computerSelection == "paper":
-            result = "You chose scissors. \nComputer chose paper. \n You win! Scissors beats paper.";
+        case playerSelection.toLowerCase() == "ring" && computerSelection == "gollum":
+            result = "You chose the Ring. \nSauron chose Gollum. \n You win! The Ring corrupts Gollum.";
             break;
-        case playerSelection.toLowerCase() == "scissors" && computerSelection == "rock":
-            result = "You chose scissors. \nComputer chose rock. \n You lost! Rock beats scissors.";    
+        case playerSelection.toLowerCase() == "ring" && computerSelection == "frodo":
+            result = "You chose the Ring. \nSauron chose Frodo. \n You lost! Frodo destroys the Ring.";    
             break;   
         default:
-            result = "You must choose either rock, paper or scissors. Check your spelling :)"; 
+            result = "You must choose either frodo, gollum or ring. Check your spelling :)"; 
             
     }
 
@@ -69,11 +69,11 @@ function game() {
         } else if (loser) {
             computerScore++;
         }
-        console.log(`Score: \n You: ${playerScore}, Computer: ${computerScore}`);
+        console.log(`Score: \n You: ${playerScore}, Sauron: ${computerScore}`);
     }
     if (playerScore == 3) {
-        console.log("You are the winner, congratulations!");
+        console.log("You have beaten Sauron and saved Middle Earth, congratulations!");
     } else if (computerScore == 3) {
-        console.log("You lost the game. Better luck next time!")
+        console.log("You have been defeated by Sauron, Middle Earth will now be covered in a second darkness!")
     }
 }
