@@ -2,6 +2,7 @@
 // initialises an array with the choices for the game: frodo, gollum, ring, and player selection as an empty string
 let choices = ["frodo", "gollum", "ring"];
 let playerSelection = "";
+let computerSelection = "";
 
 // function which determines the computer's choice by taking the array 'choices' as a parameter,
 // then initialising an index which will randomly select one of the choices and return the choice corresponding to the index number
@@ -14,7 +15,8 @@ function computerPlay (choices) {
 // initialises the return and then uses a switch  method to store the result in the result variable, returning the return at the end.
 function playRound (playerSelection, computerSelection) {
     
-    playerSelection = window.prompt("Frodo, Gollum or Ring?");
+    computerSelection = computerPlay(choices);
+//    playerSelection = window.prompt("Frodo, Gollum or Ring?");
     let result = "";
     
     switch (true) {
@@ -59,7 +61,6 @@ function game() {
     let playerScore = 0;
     let computerScore = 0;
     while (playerScore < 3 && computerScore < 3) {
-        let computerSelection = computerPlay(choices);
         let result = playRound(playerSelection, computerSelection);
         console.log(result);
         let winner = result.includes("You win");
@@ -77,3 +78,28 @@ function game() {
         console.log("You have been defeated by Sauron, Middle Earth will now be covered in a second darkness!")
     }
 }
+
+//listens for user to select an option and runs a game round
+const frodo = document.querySelector("#frodo");
+frodo.addEventListener("click", () => {
+    content.textContent = playRound("frodo");
+    results.appendChild(content);
+});
+
+const gollum = document.querySelector("#gollum");
+gollum.addEventListener("click", () => {
+    content.textContent = playRound("gollum");
+    results.appendChild(content);
+});
+
+const ring = document.querySelector("#ring");
+ring.addEventListener("click", () => {
+    content.textContent = playRound("ring");
+    results.appendChild(content);
+});
+
+//adds DOM elements to display results
+const results = document.querySelector("#results");
+
+const content = document.createElement("div");
+content.classList.add("content");
