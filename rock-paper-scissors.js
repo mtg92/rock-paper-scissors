@@ -99,7 +99,7 @@ ring.addEventListener("click", () => {
 });
 
 //adds DOM elements to display results
-const results = document.querySelector("#results");
+const results = document.querySelector(".results");
 
 const content = document.createElement("div");
 content.classList.add("content");

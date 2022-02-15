@@ -1,0 +1,46 @@
+/* styles.css */
+
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=UnifrakturCook:wght@700&display=swap');
+
+body {
+    background-color: black;
+    background-image: url(../rock-paper-scissors/img/mnt-doom.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header {
+    font-size: 70px;
+    color: gold;
+    font-family: 'UnifrakturCook', cursive;
+    display: flex;
+    justify-content:right;
+    flex: 1;
+    padding-right: 500px;
+}
+
+.options {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.results {
+    color: gold;
+    background-image: url(../rock-paper-scissors/img/one-ring.svg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-content:space-between;
+    font-family: 'MedievalSharp', cursive;
+    font-size: 20px;
+    padding: 30px 20px 30px 20px;
+}
